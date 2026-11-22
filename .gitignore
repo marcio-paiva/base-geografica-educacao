@@ -1,0 +1,17 @@
+# Ambiente Python
+.venv/
+__pycache__/
+*.pyc
+
+# Credenciais locais (use .env.example como modelo)
+.env
+
+# Arquivos temporários
+*.tmp
+*.log
+!scripts/log_tratamento.txt
+.DS_Store
+Thumbs.db
+
+# Cache de downloads intermediários
+dados/cache/

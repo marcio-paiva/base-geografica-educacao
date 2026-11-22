@@ -1,0 +1,18 @@
+# Texto sempre com quebra de linha LF (evita problemas no psql e no \copy)
+* text=auto eol=lf
+*.sql text eol=lf
+*.csv text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.sh text eol=lf
+*.ps1 text eol=crlf
+
+# Binários
+*.zip binary
+*.gpkg binary
+*.shp binary
+*.dbf binary
+*.shx binary
+*.prj text
+*.parquet binary
+*.png binary

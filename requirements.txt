@@ -1,0 +1,11 @@
+# Testado com Python 3.11 no Windows 11
+geobr==2.1.1
+geopandas==1.2.0
+pyogrio==0.13.0
+shapely==2.2.0
+pandas==3.1.1
+pyarrow==26.0.1
+# geobr 2.1.1 não funciona com duckdb 2.x (usa Relation.fetchone, removido)
+duckdb==1.5.6
+requests==2.34.2
+Unidecode==1.4.0

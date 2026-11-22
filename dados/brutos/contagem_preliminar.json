@@ -1,0 +1,44 @@
+{
+  "recorte": "Microrregião de Itabira (MG)",
+  "municipios": 18,
+  "escolas": {
+    "total": 624,
+    "por_situacao": {
+      "em_atividade": 319,
+      "paralisada": 303,
+      "extinta": 2
+    },
+    "sem_coordenada": 0
+  },
+  "rodovias": {
+    "trechos_estado": 3444,
+    "trechos_no_recorte": 113,
+    "trechos_por_municipio": 148,
+    "colunas": [
+      "id",
+      "id_cide",
+      "id_referen",
+      "codigo_rod",
+      "tipo_trech",
+      "unidade_fe",
+      "codigo_snv",
+      "codigo_sre",
+      "local_inic",
+      "local_fim",
+      "quilometra",
+      "quilometr0",
+      "extensao",
+      "superficie",
+      "tipo_reves",
+      "convenio",
+      "mp082",
+      "jurisdicao",
+      "referencia",
+      "dt_ini",
+      "dt_fim"
+    ]
+  },
+  "total_feicoes_estimado": 790,
+  "minimo_enunciado": 500,
+  "atende_minimo": true
+}

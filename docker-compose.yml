@@ -1,0 +1,24 @@
+# Alternativa com Docker. O caminho principal (testado) é o PostgreSQL portátil:
+# scripts/pg_portatil.ps1. Mesmas versões principais: PostgreSQL 16 + PostGIS 3.7.
+services:
+  db:
+    image: postgis/postgis:16-3.7
+    container_name: bdgeo_escolas_db
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-bdgeo_escolas}
+      POSTGRES_USER: ${POSTGRES_USER:-bdgeo}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-bdgeo}
+    ports:
+      - "${POSTGRES_PORT:-5433}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      # Repositório montado como somente leitura para rodar sql/*.sql e \copy dos CSV
+      - ./:/repo:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  pgdata:

@@ -1,0 +1,62 @@
+{
+  "ibge_localidades": {
+    "camada": "municipio",
+    "arquivo": "dados/brutos/ibge/localidades_microrregiao_31031.json",
+    "orgao": "IBGE – API de Localidades",
+    "url": "https://servicodados.ibge.gov.br/api/v1/localidades/microrregioes/31031/municipios",
+    "data_coleta": "2026-11-22",
+    "versao": "API v1 (divisão territorial vigente na data de coleta)",
+    "licenca": "Dados abertos do IBGE; uso e redistribuição livres com citação da fonte (IBGE).",
+    "tamanho_bytes": 8289,
+    "sha256": "422247023d910e1137245b771dc374c95bf0db2d6909883dfd35d158b33b7da4",
+    "observacao": ""
+  },
+  "ibge_malha": {
+    "camada": "municipio",
+    "arquivo": "dados/brutos/ibge/malha_municipios_microrregiao_31031.geojson",
+    "orgao": "IBGE – API de Malhas Geográficas",
+    "url": "https://servicodados.ibge.gov.br/api/v3/malhas/microrregioes/31031?formato=application/vnd.geo+json&qualidade=maxima&intrarregiao=municipio",
+    "data_coleta": "2026-11-22",
+    "versao": "API v3, malha vigente na data de coleta",
+    "licenca": "Dados abertos do IBGE; uso e redistribuição livres com citação da fonte (IBGE).",
+    "tamanho_bytes": 165573,
+    "sha256": "2a7fa856a5a00baa1edf5ed18934d1d16706cc9422fafeb3ef50b86a3f95bf16",
+    "observacao": "GeoJSON em coordenadas geográficas. O formato GeoJSON declara WGS 84 por especificação, mas a malha do IBGE é SIRGAS 2000 (EPSG:4674); o SRID é atribuído no tratamento."
+  },
+  "ibge_sidra_4714": {
+    "camada": "municipio",
+    "arquivo": "dados/brutos/ibge/sidra_4714_censo2022_microrregiao_31031.json",
+    "orgao": "IBGE – SIDRA, tabela 4714 (Censo Demográfico 2022)",
+    "url": "https://apisidra.ibge.gov.br/values/t/4714/n6/in%20n9%2031031/v/93,6318/p/2022",
+    "data_coleta": "2026-11-22",
+    "versao": "Censo Demográfico 2022",
+    "licenca": "Dados abertos do IBGE; uso e redistribuição livres com citação da fonte (IBGE).",
+    "tamanho_bytes": 10287,
+    "sha256": "dc2cc8af59bdfbad2744f575003eb1d196f8e8548c530e5cd7b5b4451032b1c1",
+    "observacao": "Variáveis 93 (população residente) e 6318 (área territorial, km²)."
+  },
+  "inep_escolas_geobr": {
+    "camada": "escola",
+    "arquivo": "dados/brutos/inep_geobr/escolas_mg_2025.gpkg",
+    "orgao": "INEP – Censo Escolar (cadastro de escolas), distribuído por IPEA/geobr",
+    "url": "https://github.com/ipeaGIT/geobr (função read_schools)",
+    "data_coleta": "2026-11-22",
+    "versao": "Censo Escolar 2025; geobr 2.1.1",
+    "licenca": "Dados públicos do INEP, citar o INEP e o geobr (IPEA). O site do INEP adota CC BY-ND 3.0 para seu conteúdo; uso confirmado como fonte do Anexo A do enunciado.",
+    "tamanho_bytes": 6946816,
+    "sha256": "fb0cfdcbebd57cea93beeebad72567912d91b691ccef154ca77eb6b1689e7b04",
+    "observacao": "Estado inteiro, como entregue pelo geobr. Coordenadas lat_inep/lon_inep do INEP; colunas *_geocodebr trazem a geocodificação do IPEA como alternativa."
+  },
+  "ide_sisema_rodovias": {
+    "camada": "trecho_rodoviario",
+    "arquivo": "dados/brutos/ide_sisema/ide_0401_mg_rodovias_lin.zip",
+    "orgao": "DNIT (SNV) e Semad/MG, distribuído pela IDE-Sisema",
+    "url": "https://geoserver.meioambiente.mg.gov.br/IDE/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=IDE:ide_0401_mg_rodovias_lin&maxFeatures=10000000&outputFormat=SHAPE-ZIP",
+    "data_coleta": "2026-11-22",
+    "versao": "Rodovias estaduais e federais de MG; dados atualizados em 12/2021 (metadado revisado em 2022-06-29)",
+    "licenca": "Metadado declara 'O acesso ao dado é livre'; citar DNIT e IDE-Sisema. Metadado: https://idesisema.meioambiente.mg.gov.br/geonetwork/srv/api/records/ba9062d9-15d1-4373-9638-2ef8ce885f74",
+    "tamanho_bytes": 31011361,
+    "sha256": "9241bccbedf662e54d3b5b0c61d7d59be5aaa416465e75ed7eed9a43f3e48d1e",
+    "observacao": "Shapefile compactado do estado inteiro, EPSG:4674."
+  }
+}
