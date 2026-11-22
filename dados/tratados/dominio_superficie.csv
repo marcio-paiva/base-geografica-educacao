@@ -1,0 +1,9 @@
+cod_superficie,descricao
+PAV,Pavimentada
+DUP,Pavimentada duplicada
+IMP,Implantada (sem pavimento)
+LEN,Leito natural
+PLA,Planejada
+EOP,Em obras de pavimentacao
+EOD,Em obras de duplicacao
+N,Nao informada

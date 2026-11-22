@@ -1,0 +1,27 @@
+Log do tratamento (scripts/tratamento/tratar.py)
+geopandas 1.2.0, shapely 2.2.0
+
+[dominio_dependencia] 4 registros gravados em dados/tratados/dominio_dependencia.csv
+[dominio_situacao] 3 registros gravados em dados/tratados/dominio_situacao.csv
+[dominio_jurisdicao] 3 registros gravados em dados/tratados/dominio_jurisdicao.csv
+[dominio_superficie] 8 registros gravados em dados/tratados/dominio_superficie.csv
+[municipio] 18 municipios; com atributo ausente: 0
+[municipio] geometrias invalidas antes do make_valid: 0
+[municipio] maior diferenca entre area oficial e area da malha: 0.08%
+[municipio] 18 registros gravados em dados/tratados/municipio.csv
+[escola] lidas 24069 escolas de MG
+[escola] dentro dos 18 municipios do recorte: 624
+[escola] removidas por coordenada nula/vazia: 0
+[escola] cod_inep duplicado: 0
+[escola] enderecos nulos: 0; bairros nulos: 270; cep nulo: 0
+[escola] geometrias invalidas antes do make_valid: 0
+[escola] pontos fora do municipio declarado: 0 de 624
+[escola] 624 registros gravados em dados/tratados/escola.csv
+[trecho_rodoviario] lidos 3444 trechos de MG
+[trecho_rodoviario] trechos que cruzam o recorte: 113
+[trecho_rodoviario] pedacos apos cortar por municipio: 148
+[trecho_rodoviario] pedacos com menos de 1 m descartados: 0
+[trecho_rodoviario] jurisdicao nao informada: 16; superficie nao informada: 16
+[trecho_rodoviario] codigo nulo: 16; tipo_trecho nulo: 16
+[trecho_rodoviario] geometrias invalidas antes do make_valid: 0
+[trecho_rodoviario] 148 registros gravados em dados/tratados/trecho_rodoviario.csv
