@@ -15,3 +15,6 @@ Thumbs.db
 
 # Cache de downloads intermediários
 dados/cache/
+
+# Material da disciplina: apenas local
+ATIVIDADE/
