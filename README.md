@@ -11,11 +11,12 @@ Trabalho de CSI803 – Banco de Dados Geográficos (UFOP). **Em andamento:** est
 | 3. Tratamento | Concluída: `scripts/tratamento/tratar.py` gera `dados/tratados/*.csv` (EWKT, EPSG:4674); log em `scripts/log_tratamento.txt` |
 | 4. Schema | Concluída: `sql/schema.sql` (3 tabelas espaciais + 4 de domínio) e `sql/carga.sql` (`\copy`), testados em banco limpo no Docker |
 | 5. Carga e validação | Concluída: `sql/validacao.sql` (30 verificações, todas OK) em banco limpo com PostgreSQL 16.15 + PostGIS 3.4.2 |
-| 6. Documentação | Pendente |
+| 6. Documentação | Em andamento: `DICIONARIO.md` concluído; faltam `docs/der.png`, `sql/consultas.sql`, `LICENSE` e o README final |
 | 7. Publicação | Pendente |
 
 ## Por onde começar
 
+- [DICIONARIO.md](DICIONARIO.md): dicionário de dados (fontes, SRID, tratamentos, todas as tabelas e colunas, relacionamentos e limitações).
 - [docs/AMBIENTE.md](docs/AMBIENTE.md): como montar o banco e o Python e como rodar a coleta.
 - [dados/brutos/FONTES.md](dados/brutos/FONTES.md): fonte, data de coleta, versão, licença e hash de cada arquivo baixado.
 - `dados/brutos/contagem_preliminar.json`: contagem de feições por camada dentro do recorte.
