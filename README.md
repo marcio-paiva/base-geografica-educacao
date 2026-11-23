@@ -10,7 +10,7 @@ Trabalho de CSI803 – Banco de Dados Geográficos (UFOP). **Em andamento:** est
 | 2. Coleta | Concluída: 18 municípios, 624 escolas, 148 trechos de rodovia no recorte (790 feições) |
 | 3. Tratamento | Concluída: `scripts/tratamento/tratar.py` gera `dados/tratados/*.csv` (EWKT, EPSG:4674); log em `scripts/log_tratamento.txt` |
 | 4. Schema | Concluída: `sql/schema.sql` (3 tabelas espaciais + 4 de domínio) e `sql/carga.sql` (`\copy`), testados em banco limpo no Docker |
-| 5. Carga e validação | Pendente (`sql/validacao.sql`; a carga em si já funciona) |
+| 5. Carga e validação | Concluída: `sql/validacao.sql` (30 verificações, todas OK) em banco limpo com PostgreSQL 16.15 + PostGIS 3.4.2 |
 | 6. Documentação | Pendente |
 | 7. Publicação | Pendente |
 
@@ -30,7 +30,10 @@ python scripts/tratamento/tratar.py
 docker compose down -v; docker compose up -d
 docker compose exec -w /repo db psql -U bdgeo -d bdgeo_escolas -f sql/schema.sql
 docker compose exec -w /repo db psql -U bdgeo -d bdgeo_escolas -f sql/carga.sql
+docker compose exec -w /repo db psql -U bdgeo -d bdgeo_escolas -f sql/validacao.sql
 ```
+
+O `sql/validacao.sql` confere contagens, geometrias (nulas, vazias, inválidas, tipo e SRID), chaves estrangeiras, as relações espaciais documentadas (escolas e trechos dentro do município declarado), `extensao_km`, índices GiST, snake_case e UTF-8. Ele mostra um relatório OK/FALHA e termina com erro se alguma verificação falhar.
 
 Resultado: 18 municípios, 624 escolas e 148 trechos rodoviários (790 feições). Modelo:
 
