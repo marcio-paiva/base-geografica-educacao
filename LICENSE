@@ -1,0 +1,62 @@
+Licenca do repositorio "base-geografica-educacao"
+Trabalho de CSI803 - Banco de Dados Geograficos (UFOP), 2026.
+
+Este repositorio combina CODIGO proprio e DADOS de terceiros. Cada parte tem
+a sua licenca, descrita abaixo.
+
+=============================================================================
+1. CODIGO (scripts/, sql/, docker-compose.yml, docs/der.mmd, documentacao)
+=============================================================================
+
+MIT License
+
+Copyright (c) 2026 Integrantes do grupo (nomes no README.md)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+=============================================================================
+2. DADOS (dados/brutos/ e dados/tratados/)
+=============================================================================
+
+Os dados NAO sao de autoria do grupo. Eles pertencem aos orgaos abaixo e
+mantem as condicoes de uso originais. Quem reutilizar a base deve citar as
+fontes. Detalhes (URL, data de coleta, versao e hash de cada arquivo) em
+dados/brutos/FONTES.md.
+
+- Municipios (malha, lista e regiao imediata, populacao e area do Censo 2022)
+  Fonte: IBGE - APIs de Localidades e de Malhas Geograficas v3 e SIDRA
+  (tabela 4714).
+  Condicoes: dados abertos do IBGE; uso e redistribuicao livres com citacao
+  da fonte ("Fonte: IBGE").
+
+- Escolas (cadastro do Censo Escolar 2025, com coordenadas)
+  Fonte: INEP, distribuido pelo pacote geobr 2.1.1 (IPEA).
+  Condicoes: dados publicos do INEP; citar o INEP e o geobr (IPEA). O portal
+  do INEP adota a licenca CC BY-ND 3.0 para o seu conteudo. A base usa apenas
+  atributos cadastrais de estabelecimentos; nenhum dado pessoal e incluido.
+
+- Rodovias (trechos federais e estaduais, SNV)
+  Fonte: DNIT (Sistema Nacional de Viacao) e Semad/MG, distribuido pela
+  IDE-Sisema, camada ide_0401_mg_rodovias_lin (dados de 12/2021).
+  Condicoes: o metadado declara "O acesso ao dado e livre"; citar o DNIT e a
+  IDE-Sisema.
+
+Os dados tratados (dados/tratados/) sao derivados desses conjuntos
+(filtragem, reprojecao, corte por municipio e padronizacao de nomes). As
+transformacoes estao descritas no DICIONARIO.md.

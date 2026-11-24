@@ -1,0 +1,58 @@
+erDiagram
+    municipio ||--o{ escola : "contem"
+    municipio ||--o{ trecho_rodoviario : "contem"
+    dominio_dependencia ||--o{ escola : "classifica"
+    dominio_situacao ||--o{ escola : "classifica"
+    dominio_jurisdicao ||--o{ trecho_rodoviario : "classifica"
+    dominio_superficie ||--o{ trecho_rodoviario : "classifica"
+    escola }o..o{ trecho_rodoviario : "ST_DWithin (proximidade)"
+    municipio {
+        integer cod_ibge PK
+        varchar_60 nome
+        char_2 uf
+        varchar_60 regiao_imediata
+        numeric_10_3 area_km2
+        integer populacao
+        geometry_MultiPolygon_4674 geom
+    }
+    escola {
+        bigint cod_inep PK
+        varchar_150 nome
+        integer cod_ibge FK
+        smallint cod_dependencia FK
+        smallint cod_situacao FK
+        varchar_7 localizacao
+        varchar_200 endereco
+        varchar_100 bairro
+        char_8 cep
+        geometry_Point_4674 geom
+    }
+    trecho_rodoviario {
+        integer id_trecho PK
+        integer cod_ibge FK
+        varchar_10 codigo
+        varchar_15 codigo_snv
+        varchar_20 tipo_trecho
+        varchar_100 local_inicial
+        varchar_100 local_final
+        char_1 cod_jurisdicao FK
+        varchar_3 cod_superficie FK
+        numeric_8_3 extensao_km
+        geometry_MultiLineString_4674 geom
+    }
+    dominio_dependencia {
+        smallint cod_dependencia PK
+        varchar_30 descricao
+    }
+    dominio_situacao {
+        smallint cod_situacao PK
+        varchar_40 descricao
+    }
+    dominio_jurisdicao {
+        char_1 cod_jurisdicao PK
+        varchar_20 descricao
+    }
+    dominio_superficie {
+        varchar_3 cod_superficie PK
+        varchar_40 descricao
+    }
