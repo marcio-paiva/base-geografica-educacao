@@ -196,6 +196,6 @@ Cite também as fontes originais: IBGE (malha municipal e Censo 2022), INEP (Cen
 | Nome completo | GitHub |
 | --- | --- |
 | Márcio Paiva | [@marcio-paiva](https://github.com/marcio-paiva) |
-| Emily Frade dos Santos | [@emilyfrade](https://github.com/EmilyFrade) |
+| Emily Frade | [@emilyfrade](https://github.com/EmilyFrade) |
 | Gustavo Rodrigues | [@gusparck](https://github.com/gusparck) |
 | Pedro Barreto| |
